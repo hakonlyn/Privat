@@ -83,7 +83,7 @@ public class Fibonacci {
 
  Implement the function body according to the specification. Then write unit tests using junit to make sure it works.
  
- **Exercise 2 - Palindrome: (30% points)**
+ **Exercise 2 - Palindrome: (40% points)**
  
  ```
  package assignment1;
@@ -131,7 +131,7 @@ public class Palindrome {
 
  ```
  
-  **Exercise 3 - Bounded queue: (30% points)**
+  **Exercise 3 - Bounded queue: (40% points)**
   ```
   package assignment1;
 /* Implement a BoundedQueue that supports a data structure which is of fixed size and circular,
