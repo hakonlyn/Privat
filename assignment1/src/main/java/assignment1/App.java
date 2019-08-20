@@ -4,8 +4,9 @@
 package assignment1;
 
 public class App {
+    // Return a string with a greeting message of your choice.
     public String getGreeting() {
-        return "Hello world.";
+        return null;
     }
 
     public static void main(String[] args) {
