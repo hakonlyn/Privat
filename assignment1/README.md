@@ -50,7 +50,7 @@ Follow the steps below to clone the github repository and setup the remote
 
 1. Run `git clone https://github.com/uis-dat240-fall19/assignments.git`
 2. cd to the assignments directory 
-3. Run `git remote add dat240labs https://github.com/uis-dat320-fall18/username-labs`  where `username` should be replaced with your own GitHub username and `dat240labs` can be replaced with any name you prefer.
+3. Run `git remote add dat240labs https://github.com/uis-dat240-fall19/username-labs`  where `username` should be replaced with your own GitHub username and `dat240labs` can be replaced with any name you prefer.
 4. After you have made the changes commit them with `git commit -m "Comment"` and run `git push dat240labs` to have the changes pushed up to your own `username-labs` repository on GitHub. Note that you cloned the original repository but pushing to your own private repository. 
 5.  If you make changes to your own `username-labs` repository using the GitHub
    web interface, and want to pull those changes down to your own computer, you
