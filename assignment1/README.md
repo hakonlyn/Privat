@@ -81,7 +81,7 @@ public class Fibonacci {
 
 ```
 
- Implement the function body according to the specification. Then write unit tests using junit to make sure it works.
+ Implement the function body according to the specification. 
  
  **Exercise 2 - Palindrome: (40% points)**
  
@@ -154,3 +154,5 @@ public class BoundedQueue<T> {
 	}
 }
   ```
+  
+For all exercises we have some unit tests but you should write more unit tests using junit to make sure it works and thorough coverage.
