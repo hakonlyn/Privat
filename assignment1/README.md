@@ -22,7 +22,12 @@ Install java using instructions [here](https://java.com/en/download/help/downloa
 
 **Task - Install gradle:**
 
-The first task of this lab is to install gradle by following the instructions [here](https://docs.gradle.org/current/userguide/installation.html). Install Gradle for the respective operating systems (Windows/Linux/Mac) you have.
+The first task of this lab is to install gradle by following the instructions [here](https://docs.gradle.org/current/userguide/installation.html). Install Gradle for the respective operating systems (Windows/Linux/Mac) you have. 
+
+**Task - Install necessary toos:**
+Mac users you may have to install Command line tools. If you install xcode it might be automatically done. If you have newer version of macos (Mojave) you can install from app store. But if have older version of mac (High Sierra) install appropriate older version of command line tools from (here)[https://developer.apple.com/download/more/]
+
+In Windows you may have to install gitbash (here)[https://git-scm.com/download/win]
 
 **Task - Create an application:**
 
