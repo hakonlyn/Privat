@@ -5,7 +5,7 @@
 | Lab 1:		| Java programming tools		|
 | -------------------- 	| ------------------------------------- |
 | Subject: 		| DAT240 Advanced Programming 		|
-| Deadline:		| Aug 28 2019 23:59			|
+| Deadline:		| Sep 03 2019 23:59			|
 | Expected effort:	| 10-15 hours 				|
 | Grading: 		| Pass/fail 				|
 | Submission: 		| Individually				|
