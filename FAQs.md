@@ -4,6 +4,7 @@ Question:
 - How to import/open project in eclipse
 
 Answer:
+This solution applies to non-Gradle projects
 1. File
 2. Open Project From File System
 3. Find the root directory
