@@ -9,14 +9,17 @@ Notice the T, it makes the code to work for any type of items.
 public class BoundedQueue<T> {
   public BoundedQueue(int size){
   	//Todo implement the constructor to create a bounded queue of ssize size
+	  
   }
   
   //Returns 0 if insertion was successful -1 if it fails
   public Integer insertItem(T item){
   	//Write code to insert item at the 'end'
+	  return 0;
   }
   
   public T getFront(){
   	//Write code to return the item at the front and remove that item from the queue
+	  return null;
   }
 }

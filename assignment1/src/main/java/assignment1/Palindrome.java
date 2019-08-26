@@ -10,8 +10,12 @@ public class Palindrome {
 	 * @return true if s is a permutation of t
 	 */
 	public static boolean isPermutation(String s, String t) {
-		   return false;
-	   	
+		for (char chS: s.toCharArray()) {
+			for (char chT: t.toCharArray()) {
+//				System.out.println(t);
+			}
+		}
+		return false;
 	   }
 	   
 	   
@@ -34,7 +38,6 @@ public class Palindrome {
 	 */
 	public static boolean isPalindrome(String s){
 		   return false;
-	   	
 	   }
 	   
 
