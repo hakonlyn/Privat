@@ -19,7 +19,7 @@ public class FibonacciTest {
 		fiboMap.put(20, 6765);
 		fiboMap.put(-1, 0);
 		for(Map.Entry<Object, Object> entry : fiboMap.entrySet()) {
-			wassertEquals(fibo.getFibonacci(((Number)(entry.getKey())).longValue()), ((Number)entry.getValue()).longValue());
+			assertEquals(fibo.getFibonacci(((Number)(entry.getKey())).longValue()), ((Number)entry.getValue()).longValue());
 		}
 		
 	}
