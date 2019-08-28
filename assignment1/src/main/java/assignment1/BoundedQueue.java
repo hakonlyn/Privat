@@ -34,8 +34,10 @@ public class BoundedQueue<T> {
   
   public T getFront(){
   	//Write code to return the item at the front and remove that item from the queue
-	  arr.remove(size-1);
-	  taken--;
-	  return arr.get(size-1);
+	  if (taken > 0) {
+		  taken--;
+		  return arr.remove(0);
+	  }
+	  return null;
 	  }
 }

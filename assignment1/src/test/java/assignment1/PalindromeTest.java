@@ -31,9 +31,9 @@ public class PalindromeTest {
 	@Test
 	public void testisPermutationOfPalindrome()
 	{
-		System.out.println(Palindrome.isPermutationOfPalindrome("kayak"));
-		System.out.println(Palindrome.isPermutationOfPalindrome("Rats live on no evil star"));
-		System.out.println(Palindrome.isPermutationOfPalindrome("dogs are cute!"));
+//		System.out.println(Palindrome.isPermutationOfPalindrome("kayak"));
+//		System.out.println(Palindrome.isPermutationOfPalindrome("Rats live on no evil star"));
+//		System.out.println(Palindrome.isPermutationOfPalindrome("dogs are cute!"));@
 		
 		assertTrue(Palindrome.isPermutationOfPalindrome("kayak"));
 		assertTrue(Palindrome.isPermutationOfPalindrome("Rats live on no evil star"));

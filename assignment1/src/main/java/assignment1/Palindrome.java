@@ -101,7 +101,6 @@ public class Palindrome {
 					sHash.put(sArr[i], 1);
 				}
 			}
-			System.out.println(sHash);
 			
 			int oddCount = 0;
 			for (int i : sHash.values()) {
