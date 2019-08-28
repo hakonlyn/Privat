@@ -13,6 +13,7 @@ public class BoundedQueue<T> {
 	
 	private ArrayList<T> arr = new ArrayList<>(); 
 	private int size;
+	private int taken = 0;
 	
 
   public BoundedQueue(int size){
@@ -23,13 +24,18 @@ public class BoundedQueue<T> {
   //Returns 0 if insertion was successful -1 if it fails
   public Integer insertItem(T item){
   	//Write code to insert item at the 'end'
+	  if (taken >= size) {
+		  return -1;
+	  }
 	  arr.add(item);
+	  taken++;
 	  return 0;
   }
   
   public T getFront(){
   	//Write code to return the item at the front and remove that item from the queue
 	  arr.remove(size-1);
+	  taken--;
 	  return arr.get(size-1);
 	  }
 }
