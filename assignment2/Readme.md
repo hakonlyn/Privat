@@ -29,16 +29,31 @@ To see the assignment2 in your local directory first run:
 
 **Exercise 1 - Reading files in Java: (20% points)**
 
-Change directory to: cd assignments/assignment2 and confirm that the files for assignment2 resides in that folder. They should, assuming that you followed the steps above. The file under assignment2/src/main/java/assignment2/ImageLabelReader.java contains the following skeleton code:
+Change directory to: cd assignments/assignment2 and confirm that the files for assignment2 resides in that folder. They should, assuming that you followed the steps above. The goal of this exercise is to build a lookup table using a hashmap to get the image files for a given label or label of a given image. The information about the data is present in two files (label_mapping.csv and image_mapping.csv). The images to label mapping are done via an integer id. The goal is to read these files and build a HashMap or any other (datastructure you feel is appropriate) to create a look up table. The data for this exercise comes from your project so you can reuse this code later for your project. The file under assignment2/src/main/java/assignment2/ImageLabelReader.java contains the following skeleton code:
 
 ```
 package assignment1;
 
 public class ImageLabelReader {
-     	  
-	public long getFibonacci(long number) {
+
+	public ImageLabelReader(String file1, String file2) {
 		
 	}
+     	
+	//Given an image file get it's label
+	//Note that each image has a single label
+	public String getLabel(String imageFileName){
+		return null;
+	}
+	
+	//Given a label get all the image files corresponding to this label
+	//Note that there could be multiple images for a given label
+	public String[] getImageFiles(String label){
+	
+	}
+	
+	
+	
 }
 
 ```
