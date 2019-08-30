@@ -55,8 +55,9 @@ public class ImageLabelReader {
   
 For all exercises we have some unit tests but you should write more unit tests using junit to make sure it works and thorough coverage.
 
-Once you are done changing to submot 
-If you haven't already added a remote, run ```git remote add dat240labs https://github.com/uis-dat240-fall19/username-labs``` where username should be replaced with your own GitHub username and dat240labs can be replaced with any name you prefer.
-After you have made the changes commit them with ```git commit -m "Comment"``` and run ```git push dat240labs``` to have the changes pushed up to your own username-labs repository on GitHub. Note that you cloned the original repository but pushing to your own private repository.
-If you make changes to your own username-labs repository using the GitHub web interface, and want to pull those changes down to your own computer, you can run the command:
+Once you are done changing to submit follow instructions below:
+
+- If you haven't already added a remote, run ```git remote add dat240labs https://github.com/uis-dat240-fall19/username-labs``` where username should be replaced with your own GitHub username and dat240labs can be replaced with any name you prefer.
+- After you have made the changes commit them with ```git commit -m "Comment"``` and run ```git push dat240labs``` to have the changes pushed up to your own username-labs repository on GitHub. Note that you cloned the original repository but pushing to your own private repository.
+- If you make changes to your own username-labs repository using the GitHub web interface, and want to pull those changes down to your own computer, you can run the command:
 ```git pull dat240labs master```
