@@ -22,7 +22,7 @@ In Assignment 2 you will work on object oriented programming and File I/O operat
 
 
 
-To see the assignment2 in your local directory first run:
+To see the assignment2 in your local directory where you cloned the assignments repository (from previous assignment) first run:
 ```git pull origin master.```
 
 
