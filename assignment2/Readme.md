@@ -1,8 +1,8 @@
 ![UiS](https://www.uis.no/getfile.php/13391907/Biblioteket/Logo%20og%20veiledninger/UiS_liggende_logo_liten.png)
 
-# Assgnment 2: Java inheritance and I/O
+# Assgnment 2: Java OO Programming and I/O
 
-| Lab 1:		| Java programming tools		|
+| Lab 1:		| Java OO Programing tools		|
 | -------------------- 	| ------------------------------------- |
 | Subject: 		| DAT240 Advanced Programming 		|
 | Deadline:		| Sep 17 2019 23:59			|
