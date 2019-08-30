@@ -29,7 +29,7 @@ To see the assignment2 in your local directory first run:
 
 **Exercise 1 - Reading files in Java: (20% points)**
 
-Change directory to: cd assignments/assignment1 and confirm that the files for assignment1 resides in that folder. They should, assuming that you followed the steps above. The file under assignment1/src/main/java/assignment1/Fibonacci.java contains the following skeleton code:
+Change directory to: cd assignments/assignment2 and confirm that the files for assignment2 resides in that folder. They should, assuming that you followed the steps above. The file under assignment2/src/main/java/assignment2/ImageLabelReader.java contains the following skeleton code:
 
 ```
 package assignment1;
