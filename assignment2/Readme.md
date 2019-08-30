@@ -49,6 +49,7 @@ public class ImageLabelReader {
 	//Given a label get all the image files corresponding to this label
 	//Note that there could be multiple images for a given label
 	public String[] getImageFiles(String label){
+		return null;
 	
 	}
 	
