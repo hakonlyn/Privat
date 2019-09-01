@@ -4,13 +4,14 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class PalindromeTest {
+	@Test
 	public static void testisPermutation()
 	{
 		assertTrue(Palindrome.isPermutation("to be or not to be!", "toot  be!or toneb"));
 		assertFalse(Palindrome.isPermutation("to be or not to be!", "tot  be!or toneb"));
 		assertFalse(Palindrome.isPermutation("to be or not to be!", "tot  be!or tondseb"));
 	}
-	
+	@Test
 	public static void testisPalindrome()
 	{
 		assertTrue(Palindrome.isPalindrome("kayak"));
@@ -19,7 +20,7 @@ public class PalindromeTest {
 		assertTrue(Palindrome.isPalindrome(" "));
 		assertTrue(Palindrome.isPalindrome(""));
 	}
-	
+	@Test
 	public static void testisPermutationOfPalindrome()
 	{
 		assertTrue(Palindrome.isPermutationOfPalindrome("kayak"));
