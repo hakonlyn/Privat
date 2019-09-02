@@ -23,6 +23,7 @@ public class BoundedQueue<T> {
   
   //Returns 0 if insertion was successful -1 if it fails
   public Integer insertItem(T item){
+	return null;
   	//Write code to insert item at the 'end'
 	  if (taken >= size) {
 		  return -1;
@@ -33,6 +34,7 @@ public class BoundedQueue<T> {
   }
   
   public T getFront(){
+	return null;
   	//Write code to return the item at the front and remove that item from the queue
 	  if (taken > 0) {
 		  taken--;

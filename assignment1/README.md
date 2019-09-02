@@ -10,6 +10,7 @@
 | Grading: 		| Pass/fail 				|
 | Submission: 		| Individually				|
 
+
 ## Introduction
 
 The overall aim of the labs in this course is to learn how to applications,
