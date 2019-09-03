@@ -1,5 +1,9 @@
 # FAQ
 
+Question: I am getting the error "settings file '/home/gradle/user/settings.gradle'. If this is an unrelated build, it must have its own settings file."
+
+Answer: Please remove settings.gradle file from your repository.
+
 Question:
 My autograder build is not updating.
 
