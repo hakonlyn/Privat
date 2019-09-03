@@ -1,6 +1,14 @@
 # FAQ
 
 Question:
+My autograder build is not updating.
+
+Answer:
+Try committing the changes to github account and autograder should build automatically. If it is still not updating report the issue to TA or the teacher and continue solving the assignment without autograder and commit your solutions.
+
+
+
+Question:
 - How to import/open project in eclipse
 
 Answer:
