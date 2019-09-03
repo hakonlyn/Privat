@@ -38,5 +38,33 @@ Answer:
   2. git commit -m "a commit message that explains what you have done"
   3. git push dat240labs
 - If you want to get the updates from the main assignment repository use this command:
-  - git pull origin dev
+  - git pull origin master
   
+___
+Question:
+- Git failure to push to remote repository
+  - Error message:
+
+To https://github.com/uis-dat240-fall19/username-labs  
+! [rejected] master -> master (fetch first)  
+error: failed to push some refs to 'https://github.com/uis-dat240-fall19/username-labs'  
+hint: Updates were rejected because the remote contains work that you do  
+hint: not have locally. This is usually caused by another repository pushing  
+hint: to the same ref. You may want to first integrate the remote changes  
+hint: (e.g., 'git pull ...') before pushing again.  
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.  
+
+Answer:  
+You won't really be able to fix this so you need to work around this problem if it occurs.
+Follow these steps:
+1. When in the assignements directory (using command line) go one level up:
+  - cd ..
+2. Now clone your private repository:
+  - git clone https://github.com/uis-dat240-fall19/username-labs
+3. Now use the file explorer to copy the assignments from the master repository into the private repository you just cloned.
+4. From now on work directly in your private repository and use this command instead:
+  - git push
+  - You no longer have to use a remote when you push
+5. When a new assignment is realeased go to the master assignment repository and use type in:
+  - git pull origin master
+6. Now copy the new assignment folder into your private repository and work on it there
