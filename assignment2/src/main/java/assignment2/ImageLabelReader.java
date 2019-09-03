@@ -6,6 +6,10 @@ import java.util.*;
 
 public class ImageLabelReader {
 
+	public static void main(String[]args){
+
+	}
+
 	public ImageLabelReader(String labelMappingFile, String imageMappingFile) {
 
 	}
