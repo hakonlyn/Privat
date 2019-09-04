@@ -1,6 +1,6 @@
 # FAQ
 
-Question: I do not see any scores updating in my autograder reseulsts
+Question: I do not see any scores updating in my autograder results
 
 Answer: Make sure you have no compilation errors. It is important that you do not modify the methods and interfaces provided with the assignments. If you delete the methods and write your own code and it of course compiles locally but autograder expects the class to contain certain methods so do not modify or delete whats already there. You can just add code to the skeleton you get.
 
