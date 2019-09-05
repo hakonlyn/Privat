@@ -1,5 +1,22 @@
 # FAQ
 
+Question: I do not see any scores updating in my autograder results
+
+Answer: Make sure you have no compilation errors. It is important that you do not modify the methods and interfaces provided with the assignments. If you delete the methods and write your own code and it of course compiles locally but autograder expects the class to contain certain methods so do not modify or delete whats already there. You can just add code to the skeleton you get.
+
+___
+Question: I am getting the error "settings file '/home/gradle/user/settings.gradle'. If this is an unrelated build, it must have its own settings file."
+
+Answer: Please remove settings.gradle file from your repository.
+
+___
+Question:
+My autograder build is not updating.
+
+Answer:
+Try committing the changes to github account and autograder should build automatically. If it is still not updating report the issue to TA or the teacher and continue solving the assignment without autograder and commit your solutions.
+
+___
 Question:
 - How to import/open project in eclipse
 

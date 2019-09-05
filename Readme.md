@@ -43,7 +43,7 @@ You will not be told your grade points, only pass/fail.
 #### Project:
 The project handin will will require a
 significant amount of work in groups. We expect students to form groups and work together
-on this lab handin. For this lab handin the passing level will also be > 60
+on this lab handin. For this lab handin the passing level will also be > 80
 points per lab. We will evaluate each handin separately and give the group a
 joint grade per lab. **The final lab grade will be determined by the oral
 examination/demo in the lab. The oral exam will be conducted group/individually.**
