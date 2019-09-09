@@ -7,12 +7,11 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import score.Score;
 
 public class UnitTestIssueResolver{ 
 
 
-	public static Score sc = new Score("Issue Resolver Test", 70, 70, 70);
+	
 
 	@Test
 	public void testIssueResolver() {
