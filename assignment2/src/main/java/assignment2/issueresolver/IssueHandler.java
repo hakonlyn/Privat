@@ -20,16 +20,6 @@ public class IssueHandler {
 	}
 
 
-
-	/*
-	 * Routes the issue to an available faculty, or saves in a queue if no faculty
-	 * available.
-	 */
-	public void allocateIssue(Student issueer) {
-		Issue issue = new Issue(issueer);
-		allocateIssue(issue);
-	}
-
 	/*
 	 * Allocate the issue to an available faculty who meets the required rank for the issue, or wait in the appropriate queue
 	 */
