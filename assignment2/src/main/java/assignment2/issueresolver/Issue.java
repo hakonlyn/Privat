@@ -16,7 +16,13 @@ public class Issue {
 	public Faculty getHandler() {
 		return handler;
 	}
-
+	
+	/*Constructor with a rank specified*/
+	public Issue(Student c, Rank r) {
+		
+	}
+	
+	/*Constructor with a rank specified where you can set a default rank which may be changed later with setRank*/
 	public Issue(Student c) {
 		
 	}
