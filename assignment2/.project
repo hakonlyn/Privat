@@ -10,7 +10,7 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
+		<buildComma'nd>
 			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
 			<arguments>
 			</arguments>

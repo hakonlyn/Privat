@@ -1,8 +1,10 @@
 package assignment1;
+import java.util.Arrays;
+import java.util.HashMap;
 
 public class Palindrome {
 
-	 //This function checks if String s is a permutation of String t
+	 //This function checks if String s is a permutation of String t. Remove white spaces
 	
 	   /**
 	 * @param s first input string 
@@ -10,10 +12,28 @@ public class Palindrome {
 	 * @return true if s is a permutation of t
 	 */
 	public static boolean isPermutation(String s, String t) {
-		   return false;
-	   	
-	   }
-	   
+		s = s.replaceAll("\\s", "");
+		t = t.replaceAll("\\s", "");
+		
+		if (s.length() != t.length()) {
+			return false;
+		}
+		
+		char sArr[] = s.toCharArray();
+		char tArr[] = t.toCharArray();
+		
+		Arrays.sort(sArr);
+		Arrays.sort(tArr);
+		
+		
+		for (int i = 0;i < sArr.length; i++) {
+			if (sArr[i] != tArr[i]) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
 	   
 	   /*This function checks if a given string is a [palindrome](https://en.wikipedia.org/wiki/Palindrome) 
 	   or not. A palindrome is a word or a sentence which spells same both forwards and backwards. 
@@ -33,8 +53,17 @@ public class Palindrome {
 	 * @return Return true if the given string s is a palindrome false otherwise
 	 */
 	public static boolean isPalindrome(String s){
-		   return false;
-	   	
+		//remove spaces... with regex
+		
+		s = s.replaceAll("[^A-Za-z0-9]+", "");
+		
+		char sArr[] = s.toCharArray();
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.toLowerCase(sArr[i]) != Character.toLowerCase(sArr[s.length()-1-i])) {
+				return false;
+			}
+		}
+		return true;
 	   }
 	   
 
@@ -52,6 +81,35 @@ public class Palindrome {
 	 * @return returns true if the given string s is a permutation of a palindrome
 	 */
 	public static boolean isPermutationOfPalindrome(String s) {
-	   		return false;
+			/* Counting alle the letters
+			 * orgonized in a dictonarry
+			 * 
+			 * */
+			
+			HashMap<Character, Integer> sHash = new HashMap<>();
+		
+			s = s.replaceAll("[^A-Za-z0-9]+", "");
+			s = s.toLowerCase();
+			
+			char sArr[] = s.toCharArray();
+
+			for (int i = 0; i < s.length(); i++) {
+				if (sHash.containsKey(sArr[i])) {
+					sHash.put(sArr[i], sHash.get(sArr[i])+1);
+				}
+				else {
+					sHash.put(sArr[i], 1);
+				}
+			}
+			
+			int oddCount = 0;
+			for (int i : sHash.values()) {
+				if(i%2 != 0) {
+					oddCount++;
+				}
+			}
+			if (oddCount > 1) return false;
+			
+	   		return true;
 	   }
 }

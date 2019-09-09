@@ -6,10 +6,12 @@ package assignment1;
 public class App {
     // Return a string with a greeting message of your choice.
     public String getGreeting() {
-        return null;
+        return "Greeting";
     }
 
     public static void main(String[] args) {
+    	Fibonacci Tallrekker = new Fibonacci();
         System.out.println(new App().getGreeting());
+        Tallrekker.getFibonacci(0);
     }
 }
