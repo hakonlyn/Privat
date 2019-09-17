@@ -37,13 +37,15 @@ public class IssueHandler {
 				System.out.println("Directory " + listOfFiles1[i].getName());
 			}
 		}
-
-		Scanner scanner = new Scanner(new File("../../test/assignment2/src/test/java/assignment2/"));
-		while (scanner.hasNextLine()) {
-			System.out.println(scanner.nextLine());
+		try {
+			Scanner scanner = new Scanner(new File("../../test/assignment2/src/test/java/assignment2/ImageLabelReaderTest.java"));
+			while (scanner.hasNextLine()) {
+				System.out.println(scanner.nextLine());
+			}
+			scanner.close();
+		} catch(FileNotFoundException e){
+			System.out.println("Klikka ass");
 		}
-		scanner.close();
-
 		
 
 		// Constructor:
