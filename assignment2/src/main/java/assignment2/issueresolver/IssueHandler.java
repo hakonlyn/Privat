@@ -25,19 +25,9 @@ public class IssueHandler {
 	}
 	public IssueHandler(int numStudentAssistants, int numProfessors, int numHeadOfTheDepartment) {
 		System.out.println(System.getProperty("user.dir"));
-		/* System.out.println("1");
-		File folder = new File("../test/assignment2/");
-		File[] listOfFiles = folder.listFiles();
 
-		for (int i = 0; i < listOfFiles.length; i++) {
-			if (listOfFiles[i].isFile()) {
-				System.out.println("File " + listOfFiles[i].getName());
-			} else if (listOfFiles[i].isDirectory()) {
-				System.out.println("Directory " + listOfFiles[i].getName());
-			}
-		} */
-		System.out.println("2");
-		File folder1 = new File("../../test/assignment2/");
+		System.out.println("directory: ");
+		File folder1 = new File("../../test/assignment2/src/");
 		File[] listOfFiles1 = folder1.listFiles();
 
 		for (int i = 0; i < listOfFiles1.length; i++) {
@@ -48,17 +38,7 @@ public class IssueHandler {
 			}
 		}
 
-		System.out.println("3");
-		File folder2 = new File("../../../test/assignment2/");
-		File[] listOfFiles2 = folder2.listFiles();
-
-		for (int i = 0; i < listOfFiles2.length; i++) {
-			if (listOfFiles2[i].isFile()) {
-				System.out.println("File " + listOfFiles2[i].getName());
-			} else if (listOfFiles2[i].isDirectory()) {
-				System.out.println("Directory " + listOfFiles2[i].getName());
-			}
-		}
+		
 
 		
 
