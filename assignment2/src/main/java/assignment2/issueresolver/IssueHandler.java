@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.io.File; // Import the File class
 
 
 /* IssueHandler represents the body of the program,
@@ -25,8 +26,16 @@ public class IssueHandler {
 	public IssueHandler(int numStudentAssistants, int numProfessors, int numHeadOfTheDepartment) {
 		System.out.println(System.getProperty("user.dir"));
 
-		// Java 7
-		// System.out.println(Paths.get("").toAbsolutePath().toString());
+		File folder = new File("./");
+		File[] listOfFiles = folder.listFiles();
+
+		for (int i = 0; i < listOfFiles.length; i++) {
+			if (listOfFiles[i].isFile()) {
+				System.out.println("File " + listOfFiles[i].getName());
+			} else if (listOfFiles[i].isDirectory()) {
+				System.out.println("Directory " + listOfFiles[i].getName());
+			}
+		}
 
 		// Constructor:
 		// Make array of faculties
@@ -88,7 +97,6 @@ public class IssueHandler {
 		if (issueRank <= Rank.HOD.getValue()){
 			for (int i = 0; i < hodArr.size(); i++) {
 				Faculty currentHod = hodArr.get(i);
-				System.out.println("hod");
 				if (currentHod.isFree()) {
 					currentHod.receiveIssue(issue);
 					issue.setHandler(currentHod);
