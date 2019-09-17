@@ -1,9 +1,12 @@
 package assignment2.issueresolver;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+
+import score.Score;
 
 /* IssueHandler represents the body of the program,
  * and all issues are assigned from here 
@@ -17,10 +20,12 @@ public class IssueHandler {
 	private ArrayList<Faculty> hodArr;
 
 	public int getQueueSize(Faculty emp) {
-		return 0;
+		return hashRank.get(emp.getRank().getValue()).size();
 		
 	}
 	public IssueHandler(int numStudentAssistants, int numProfessors, int numHeadOfTheDepartment) {
+		Method[] methods = Person.class.getDeclaredMethods();
+		System.out.println(Arrays.toString(methods));
 		// Constructor:
 		// Make array of faculties
 		hashRank = new HashMap<Integer, LinkedList>();
