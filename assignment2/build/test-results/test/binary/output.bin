@@ -1,14 +1,9 @@
 AC:\Users\refni\Documents\Schoole\DAT240\assignments\assignment2
-File .classpath
 File .DS_Store
-File .gitignore
+Directory .git
 Directory .gradle
-File .project
-Directory .settings
-Directory .vscode
-Directory bin
-Directory build
-File build.gradle
-Directory data
+Directory assignment1
+Directory assignment2
+Directory assignment3
+File FAQs.md
 File Readme.md
-Directory src
