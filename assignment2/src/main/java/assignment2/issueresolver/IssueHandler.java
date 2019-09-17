@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.io.File; // Import the File class
+import java.util.Scanner;
 
 
 /* IssueHandler represents the body of the program,
