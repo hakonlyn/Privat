@@ -44,7 +44,7 @@ public class ImageLabelReader {
 	// Note that each image has a single label
 	// If the given image file is not found return null
 	public String getLabel(String imageFileName) {
-		System.out.println(this.imageMap.get(imageFileName));
+		// System.out.println(this.imageMap.get(imageFileName));
 		return this.imageMap.get(imageFileName);
 	}
 

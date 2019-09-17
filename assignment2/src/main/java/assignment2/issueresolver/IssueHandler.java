@@ -10,15 +10,27 @@ public class IssueHandler {
 	private final int LEVELS = 3;
 
 
+	private ArrayList<Faculty> facultyArray = new ArrayList<>();
 
 	public int getQueueSize(Faculty emp) {
 		return 0;
 		
 	}
 	public IssueHandler(int numStudentAssistants, int numProfessors, int numHeadOfTheDepartment) {
+		// Constructor:
+		// Make array of faculties
 
+		for (int i = 0; i < numStudentAssistants; i++) {
+			facultyArray.add(new StudentAssistant<>(this));
+		}
+		for (int j = 0; j < numProfessors; j++) {
+			facultyArray.add(new Professors<>(this));
+		}
+		for (int k = 0; k < numHeadOfTheDepartment; k++) {
+			facultyArray.add(new HeadOfTheDepartment<>(this));
+		}
+		 
 	}
-
 
 
 	/*
