@@ -5,6 +5,7 @@ class Professor extends Faculty {
 	public Professor(IssueHandler handler) {
 		super(handler);
 		// TODO Auto-generated constructor stub
+		rank = Rank.PROFESSOR;
 	}
    
 }
