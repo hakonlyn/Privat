@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
-import score.Score;
 
 /* IssueHandler represents the body of the program,
  * and all issues are assigned from here 
@@ -24,8 +23,11 @@ public class IssueHandler {
 		
 	}
 	public IssueHandler(int numStudentAssistants, int numProfessors, int numHeadOfTheDepartment) {
-		Method[] methods = Score.class.getDeclaredMethods();
-		System.out.println(Arrays.toString(methods));
+		System.out.println(System.getProperty("user.dir"));
+
+		// Java 7
+		// System.out.println(Paths.get("").toAbsolutePath().toString());
+
 		// Constructor:
 		// Make array of faculties
 		hashRank = new HashMap<Integer, LinkedList>();
