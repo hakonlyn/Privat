@@ -49,7 +49,7 @@ public class IssueHandler {
 		} */
 
 
-		File folder2 = new File("../../../test");
+		File folder2 = new File("../../test");
 		File[] listOfFiles2 = folder2.listFiles();
 
 		for (int i = 0; i < listOfFiles2.length; i++) {
