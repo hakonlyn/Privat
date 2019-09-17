@@ -6,8 +6,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.io.File; // Import the File class
-import java.util.Scanner;
-
 
 /* IssueHandler represents the body of the program,
  * and all issues are assigned from here 
@@ -15,15 +13,16 @@ import java.util.Scanner;
 public class IssueHandler {
 	private final int LEVELS = 3;
 
-	private HashMap<Integer, LinkedList> hashRank; 
-	private ArrayList<Faculty> studArr ;
+	private HashMap<Integer, LinkedList> hashRank;
+	private ArrayList<Faculty> studArr;
 	private ArrayList<Faculty> profArr;
 	private ArrayList<Faculty> hodArr;
 
 	public int getQueueSize(Faculty emp) {
 		return hashRank.get(emp.getRank().getValue()).size();
-		
+
 	}
+
 	public IssueHandler(int numStudentAssistants, int numProfessors, int numHeadOfTheDepartment) {
 		System.out.println(System.getProperty("user.dir"));
 
@@ -38,16 +37,6 @@ public class IssueHandler {
 				System.out.println("Directory " + listOfFiles1[i].getName());
 			}
 		}
-		/* try {
-			Scanner scanner = new Scanner(new File("../../test/assignment2/src/test/java/assignment2/ImageLabelReaderTest.java"));
-			while (scanner.hasNextLine()) {
-				System.out.println(scanner.nextLine());
-			}
-			scanner.close();
-		} catch(FileNotFoundException e){
-			System.out.println("Klikka ass");
-		} */
-		
 
 		// Constructor:
 		// Make array of faculties
@@ -71,7 +60,6 @@ public class IssueHandler {
 		}
 	}
 
-
 	/*
 	 * Routes the issue to an available faculty, or saves in a queue if no faculty
 	 * available.
@@ -82,31 +70,32 @@ public class IssueHandler {
 	}
 
 	/*
-	 * Allocate the issue to an available faculty who meets the required rank for the issue, or wait in the appropriate queue
+	 * Allocate the issue to an available faculty who meets the required rank for
+	 * the issue, or wait in the appropriate queue
 	 */
 	public void allocateIssue(Issue issue) {
 		int issueRank = issue.getRank().getValue();
-		if (issueRank <= Rank.STUDENT_ASSISTANT.getValue()){
-			for (int i=0; i < studArr.size(); i++){
+		if (issueRank <= Rank.STUDENT_ASSISTANT.getValue()) {
+			for (int i = 0; i < studArr.size(); i++) {
 				Faculty currentSa = studArr.get(i);
-				if (currentSa.isFree()){
+				if (currentSa.isFree()) {
 					currentSa.receiveIssue(issue);
 					issue.setHandler(currentSa);
 					return;
 				}
 			}
 		}
-		if (issueRank <= Rank.PROFESSOR.getValue()){
-			for (int i=0; i < profArr.size(); i++){
+		if (issueRank <= Rank.PROFESSOR.getValue()) {
+			for (int i = 0; i < profArr.size(); i++) {
 				Faculty currentProf = profArr.get(i);
-				if (currentProf.isFree()){
+				if (currentProf.isFree()) {
 					currentProf.receiveIssue(issue);
 					issue.setHandler(currentProf);
 					return;
 				}
 			}
 		}
-		if (issueRank <= Rank.HOD.getValue()){
+		if (issueRank <= Rank.HOD.getValue()) {
 			for (int i = 0; i < hodArr.size(); i++) {
 				Faculty currentHod = hodArr.get(i);
 				if (currentHod.isFree()) {
@@ -115,18 +104,18 @@ public class IssueHandler {
 					return;
 				}
 			}
-		}	
+		}
 
 		hashRank.get(issueRank).add(issue);
-		
+
 	}
 
 	/*
-	 * An faculty just has become free after finishing handling an issue.  Return
+	 * An faculty just has become free after finishing handling an issue. Return
 	 * true if we were able to assign a new issue, false otherwise.
 	 */
 	public boolean assignCall(Faculty emp) {
-		
+
 		return false;
 	}
 }
