@@ -33,6 +33,7 @@ public class IssueHandler {
 	}
 
 
+<<<<<<< HEAD
 	/*
 	 * Routes the issue to an available faculty, or saves in a queue if no faculty
 	 * available.
@@ -42,6 +43,8 @@ public class IssueHandler {
 		allocateIssue(issue);
 	}
 
+=======
+>>>>>>> 377d3528a922bdfcd2bc078fce917672bed31cfa
 	/*
 	 * Allocate the issue to an available faculty who meets the required rank for the issue, or wait in the appropriate queue
 	 */
