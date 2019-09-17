@@ -24,7 +24,7 @@ public class IssueHandler {
 		
 	}
 	public IssueHandler(int numStudentAssistants, int numProfessors, int numHeadOfTheDepartment) {
-		Method[] methods = Person.class.getDeclaredMethods();
+		Method[] methods = Score.class.getDeclaredMethods();
 		System.out.println(Arrays.toString(methods));
 		// Constructor:
 		// Make array of faculties
