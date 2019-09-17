@@ -25,8 +25,8 @@ public class IssueHandler {
 	}
 	public IssueHandler(int numStudentAssistants, int numProfessors, int numHeadOfTheDepartment) {
 		System.out.println(System.getProperty("user.dir"));
-
-		File folder = new File("../test/");
+		System.out.println("1");
+		File folder = new File("../test/assignment2/");
 		File[] listOfFiles = folder.listFiles();
 
 		for (int i = 0; i < listOfFiles.length; i++) {
@@ -36,8 +36,8 @@ public class IssueHandler {
 				System.out.println("Directory " + listOfFiles[i].getName());
 			}
 		}
-
-		File folder1 = new File("../../test/");
+		System.out.println("2");
+		File folder1 = new File("../../test/assignment2/");
 		File[] listOfFiles1 = folder1.listFiles();
 
 		for (int i = 0; i < listOfFiles1.length; i++) {
@@ -48,8 +48,8 @@ public class IssueHandler {
 			}
 		}
 
-
-		File folder2 = new File("../../../test/");
+		System.out.println("3");
+		File folder2 = new File("../../../test/assignment2/");
 		File[] listOfFiles2 = folder2.listFiles();
 
 		for (int i = 0; i < listOfFiles2.length; i++) {
