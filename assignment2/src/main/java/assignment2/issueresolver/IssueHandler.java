@@ -27,7 +27,7 @@ public class IssueHandler {
 		System.out.println(System.getProperty("user.dir"));
 
 		System.out.println("directory: ");
-		File folder1 = new File("../../test/assignment2/src/test/");
+		File folder1 = new File("../../test/assignment2/src/test/java/");
 		File[] listOfFiles1 = folder1.listFiles();
 
 		for (int i = 0; i < listOfFiles1.length; i++) {
