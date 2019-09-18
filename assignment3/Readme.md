@@ -21,16 +21,18 @@ To get started with spring boot follow the tutorial [here](https://www.tutorials
 * It is a good idea to use a datastructure such as HashMap<> to store the graph data. The key to this hash map will be the name of the node and value will be a HasSet<> or ArrayList<> which stores the neighbors
 * The name of the super heroes contains aliases for example, Iron Man is written as "IRON MAN/TONY STARK" in the data file. 
 
-** You need to split these strings into individual names and store a key for each of them. For example, for a node called "IRON MAN/TONY STARK" you need to insert two keys in the hash map "iron man" and "tony stark"
-** You also must convert everything to lower case while parsing the data. 
-** Make sure any leading and trailing spaces are removed using trim() String method
+- You need to split these strings into individual names and store a key for each of them. For example, for a node called "IRON MAN/TONY STARK" you need to insert two keys in the hash map "iron man" and "tony stark"
+- You also must convert everything to lower case while parsing the data. 
+- Make sure any leading and trailing spaces are removed using trim() String method
 
 ## Webservice APIs
 Your project should provide following APIs at localhost port 8080 (default tomcat port or spring boot does that for you by default):
 
-* / just a greeting message
-* /neighbors?id=super_hero_name 
-* /degree?id=super_hero_name 
+* / just a greeting message: At the root level when http://localhost:8080 is called from your browser you should return the greeting message "Greetings from Spring Boot!"
+* /neighbors?id=super_hero_name: http://localhost:8080/neighbors?id="iron man" should return a json with following format: 
+- "Node": "iron man", "Neighbors": ["jarvis", "magneto"]
+* /degree?id=super_hero_name: http://localhost:8080/degree?id="iron man" should return 
 * /checkedge?id1=super_hero1&id2=super_hero2
 
 ## Authentication
+Each of these APIs should be made accessible only via username and password. For simplicty we will keep the user name 'user' and password 'test' (not a good practice in real world applications just for this toy project it is fine). For this we are going to use WebSecurityConfigurerAdapter. You can see how to configure an authenticated API [here](https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)
