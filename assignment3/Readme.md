@@ -21,7 +21,14 @@ To get started with spring boot follow the tutorial [here](https://www.tutorials
 * It is a good idea to use a datastructure such as HashMap<> to store the graph data. The key to this hash map will be the name of the node and value will be a HasSet<> or ArrayList<> which stores the neighbors
 * The name of the super heroes contains aliases for example, Iron Man is written as "IRON MAN/TONY STARK" in the data file. 
 
-- You need to split these strings into individual names and store a key for each of them. For example, for a node called "IRON MAN/TONY STARK" you need to insert two keys in the hash map "iron man" and "tony stark"
+- You need to split these strings into individual names and store a key for each of them. For example, for a node called "IRON MAN/TONY STARK" you need to insert two keys in the hash map "iron man" and "tony stark". Since this is an undirected graph, you also need to consider the edges in the flipped direction as well.
+
+For example, a row in the csv file with "4-D MAN/MERCURIO,IRON MAN/TONY STARK" will result in following four entries in hashmap:
+-- Key: 4-d man, Value: iron man/tony stark
+-- Key: mercurio, Value: iron man/tony stark
+-- Key: iron man, Value: 4-d man/mercurio
+-- Key: tony stark, Value: 4-d man/mercurio
+
 - You also must convert everything to lower case while parsing the data. 
 - Make sure any leading and trailing spaces are removed using trim() String method
 
