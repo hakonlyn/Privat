@@ -24,10 +24,10 @@ To get started with spring boot follow the tutorial [here](https://www.tutorials
 - You need to split these strings into individual names and store a key for each of them. For example, for a node called "IRON MAN/TONY STARK" you need to insert two keys in the hash map "iron man" and "tony stark". Since this is an undirected graph, you also need to consider the edges in the flipped direction as well.
 
 For example, a row in the csv file with "4-D MAN/MERCURIO,IRON MAN/TONY STARK" will result in following four entries in hashmap:
-- Key: 4-d man, Value: iron man/tony stark
-- Key: mercurio, Value: iron man/tony stark
-- Key: iron man, Value: 4-d man/mercurio
-- Key: tony stark, Value: 4-d man/mercurio
+  - Key: 4-d man, Value: iron man/tony stark
+  - Key: mercurio, Value: iron man/tony stark
+  - Key: iron man, Value: 4-d man/mercurio
+  - Key: tony stark, Value: 4-d man/mercurio
 
 - You also must convert everything to lower case while parsing the data. 
 - Make sure any leading and trailing spaces are removed using trim() String method
@@ -37,7 +37,7 @@ Your project should provide following APIs at localhost port 8080 (default tomca
 
 * / just a greeting message: At the root level when http://localhost:8080 is called from your browser you should return the greeting message "Greetings from Spring Boot!"
 * /neighbors?id=super_hero_name: http://localhost:8080/neighbors?id="iron man" should return a json with following format: 
-- {"Node": "iron man", "Neighbors": ["jarvis", "magneto"]}
+  - {"Node": "iron man", "Neighbors": ["jarvis", "magneto"]}
 * /degree?id=super_hero_name: http://localhost:8080/degree?id="iron man" should return 
 * /checkedge?id1=super_hero1&id2=super_hero2
 
