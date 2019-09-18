@@ -35,11 +35,13 @@ For example, a row in the csv file with "4-D MAN/MERCURIO,IRON MAN/TONY STARK" w
 ## Webservice APIs
 Your project should provide following APIs at localhost port 8080 (default tomcat port or spring boot does that for you by default):
 
-* / just a greeting message: At the root level when http://localhost:8080 is called from your browser you should return the greeting message "Greetings from Spring Boot!"
-* /neighbors?id=super_hero_name: http://localhost:8080/neighbors?id=iron man should return a json with following format: 
-  - {"Node": "iron man", "Neighbors": ["jarvis", "magneto"]}
-* /degree?id=super_hero_name: http://localhost:8080/degree?id=iron man should return 
-* /checkedge?id1=super_hero1&id2=super_hero2
+* / just a greeting message: At the root level when [http://localhost:8080](http://localhost:8080) is called from your browser you should return the greeting message "Greetings from Spring Boot!"
+* /neighbors?id=super_hero_name: [http://localhost:8080/neighbors?id=iron man](http://localhost:8080/neighbors?id=iron man) should return a json with following format: 
+  - {"Node": "iron man", "Neighbors": ["jarvis", "magneto",...]}
+* /degree?id=super_hero_name: [http://localhost:8080/degree?id=iron man](http://localhost:8080/degree?id=iron man) should return
+  - {"Node": "iron man", "Degree": 1348}
+* /checkedge?id1=super_hero1&id2=super_hero2: [http://localhost:8080/degree?id1=iron man&id2=jarvis](http://localhost:8080/degree?id1=iron man&id2=jarvis)
+  - {"Node1": "iron man", "Node2": "jarvis", "EdgeExists": true}
 
 ## Authentication
 Each of these APIs should be made accessible only via username and password. For simplicty we will keep the user name 'user' and password 'test' (not a good practice in real world applications just for this toy project it is fine). For this we are going to use WebSecurityConfigurerAdapter. You can see how to configure an authenticated API [here](https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)
