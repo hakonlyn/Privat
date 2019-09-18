@@ -14,7 +14,7 @@
 ## Spring boot
 In this assignment you will be developing a spring boot RESTful APIs for querying a social network graph from the Marvel universe. the data is found in the file called "marvel-hero-network.csv". Have look at the data.
 
-To get started with spring boot follow the tutorial [here](https://www.tutorialspoint.com/spring_boot/spring_boot_building_restful_web_services.htm) or listen to the tutorial in the lecture. 
+To get started with spring boot follow the tutorial [here](https://www.tutorialspoint.com/spring_boot/spring_boot_building_restful_web_services.htm) or listen to the tutorial in the lab . 
 
 ## Processing the data
 * Read the graph which is in CSV format. You can reuse the code to read file from your previous assignment.
@@ -36,9 +36,9 @@ For example, a row in the csv file with "4-D MAN/MERCURIO,IRON MAN/TONY STARK" w
 Your project should provide following APIs at localhost port 8080 (default tomcat port or spring boot does that for you by default):
 
 * / just a greeting message: At the root level when http://localhost:8080 is called from your browser you should return the greeting message "Greetings from Spring Boot!"
-* /neighbors?id=super_hero_name: http://localhost:8080/neighbors?id="iron man" should return a json with following format: 
+* /neighbors?id=super_hero_name: http://localhost:8080/neighbors?id=iron man should return a json with following format: 
   - {"Node": "iron man", "Neighbors": ["jarvis", "magneto"]}
-* /degree?id=super_hero_name: http://localhost:8080/degree?id="iron man" should return 
+* /degree?id=super_hero_name: http://localhost:8080/degree?id=iron man should return 
 * /checkedge?id1=super_hero1&id2=super_hero2
 
 ## Authentication
