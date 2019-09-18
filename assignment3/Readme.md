@@ -1,8 +1,8 @@
 ![UiS](https://www.uis.no/getfile.php/13391907/Biblioteket/Logo%20og%20veiledninger/UiS_liggende_logo_liten.png)
 
-# Assgnment 3: Java Springboot and Graph processing
+# Assgnment 3: Java Spring boot and Graph processing
 
-| Lab 1:		| Java OO Programing tools		|
+| Lab 1:		| Java Spring boot		|
 | -------------------- 	| ------------------------------------- |
 | Subject: 		| DAT240 Advanced Programming 		|
 | Deadline:		| Oct 02 2019 23:59			|
