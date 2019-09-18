@@ -45,3 +45,4 @@ Your project should provide following APIs at localhost port 8080 (default tomca
 
 ## Authentication
 Each of these APIs should be made accessible only via username and password. For simplicty we will keep the user name 'user' and password 'test' (not a good practice in real world applications just for this toy project it is fine). For this we are going to use WebSecurityConfigurerAdapter. You can see how to configure an authenticated API [here](https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)
+When the APIs are called without proper user credentials it should return a authentication failure error.
