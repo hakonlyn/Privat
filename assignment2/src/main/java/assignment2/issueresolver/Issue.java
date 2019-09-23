@@ -19,12 +19,14 @@ public class Issue {
 	
 	/*Constructor with a rank specified*/
 	public Issue(Student c, Rank r) {
-		
+		this.student = c;
+		this.rank = r;
 	}
 	
 	/*Constructor with a rank specified where you can set a default rank which may be changed later with setRank*/
 	public Issue(Student c) {
-		
+		this.student = c;
+		this.rank = Rank.STUDENT_ASSISTANT;
 	}
 
 	/* Set employee who is handling call. */

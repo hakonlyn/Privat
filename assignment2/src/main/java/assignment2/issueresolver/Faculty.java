@@ -31,6 +31,7 @@ abstract class Faculty {
 
 	/* Returns whether or not the faculty is free. */
 	public boolean isFree() {
+		if (currentIssue == null) return true;
 		return false;
 	}
 
