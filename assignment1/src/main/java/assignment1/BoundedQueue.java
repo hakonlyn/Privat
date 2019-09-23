@@ -11,7 +11,7 @@ Notice the T, it makes the code to work for any type of items.
 
 public class BoundedQueue<T> {
 	
-	private ArrayList<T> arr = new ArrayList<>(); 
+	private ArrayList<T> arr = new ArrayList<>(); //initalisere med size
 	private int size;
 	private int taken = 0;
 	

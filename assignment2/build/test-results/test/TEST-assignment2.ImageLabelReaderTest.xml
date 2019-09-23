@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="assignment2.ImageLabelReaderTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-09-04T11:14:57" hostname="Vemunds-MacBook-Pro.local" time="0.02">
+<testsuite name="assignment2.ImageLabelReaderTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-09-05T12:58:40" hostname="Vemunds-MacBook-Pro.local" time="0.021">
   <properties/>
-  <testcase name="testLabelFiles" classname="assignment2.ImageLabelReaderTest" time="0.02">
+  <testcase name="testLabelFiles" classname="assignment2.ImageLabelReaderTest" time="0.021">
     <failure message="java.lang.IllegalStateException: Scanner closed" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Scanner closed
 	at java.base/java.util.Scanner.ensureOpen(Scanner.java:1150)
 	at java.base/java.util.Scanner.findWithinHorizon(Scanner.java:1781)
 	at java.base/java.util.Scanner.hasNextLine(Scanner.java:1610)
-	at assignment2.ImageLabelReader.&lt;init&gt;(ImageLabelReader.java:27)
+	at assignment2.ImageLabelReader.&lt;init&gt;(ImageLabelReader.java:24)
 	at assignment2.ImageLabelReaderTest.testLabelFiles(ImageLabelReaderTest.java:10)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
