@@ -41,7 +41,7 @@ Your project should provide following APIs at localhost port 8080 (default tomca
 * /degree?id=super_hero_name: [http://localhost:8080/degree?id=iron man](http://localhost:8080/degree?id=iron man) should return
 
   - {"Node": "iron man", "Degree": 1348}
-* /checkedge?id1=super_hero1&id2=super_hero2: [http://localhost:8080/degree?id1=iron man&id2=jarvis](http://localhost:8080/degree?id1=iron man&id2=jarvis edwin)
+* /checkedge?id1=super_hero1&id2=super_hero2: [http://localhost:8080/degree?id1=iron man&id2=jarvis ewin](http://localhost:8080/degree?id1=iron man&id2=jarvis edwin)
   - {"Node1": "iron man", "Node2": "jarvis edwin", "EdgeExists": true}
 
 ## Authentication
