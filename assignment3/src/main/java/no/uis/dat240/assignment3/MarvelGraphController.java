@@ -23,6 +23,7 @@ public class MarvelGraphController {
 	public Map getNodeDegree(@RequestParam String id) {
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("Greeting", "Hello Marvel unverse!");
+		map.put("id", id);
 		return map;
 	}
 
