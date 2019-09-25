@@ -38,7 +38,7 @@ public class MarvelGraphControllerTest {
 	public void checkDegree() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/degree?id=TONY STARK").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andExpect(content().contentType("application/json;charset=UTF-8"))
-				.andExpect(jsonPath("$.Node", equalTo("tony stark"))).andExpect(jsonPath("$.Degree", equalTo(1348)));
+				.andExpect(jsonPath("$.Node", equalTo("tony stark"))).andExpect(jsonPath("$.Degree", equalTo(1521)));
 
 		mvc.perform(MockMvcRequestBuilders.get("/degree?id=vinay").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isNotFound());
@@ -51,14 +51,14 @@ public class MarvelGraphControllerTest {
 		mvc.perform(MockMvcRequestBuilders.get("/neighbors?id=Iron Man").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andExpect(content().contentType("application/json;charset=UTF-8"))
 				.andExpect(jsonPath("$.Node", equalTo("iron man"))).andExpect(jsonPath("$.Neighbors").isArray())
-				.andExpect(jsonPath("$.Neighbors", hasSize(1348)))
+				.andExpect(jsonPath("$.Neighbors", hasSize(1521)))
 				.andExpect(jsonPath("$.Neighbors", hasItem("magneto/magnus/eric")));
 //		
 
 		mvc.perform(MockMvcRequestBuilders.get("/neighbors?id=Magneto").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andExpect(content().contentType("application/json;charset=UTF-8"))
 				.andExpect(jsonPath("$.Node", equalTo("magneto"))).andExpect(jsonPath("$.Neighbors").isArray())
-				.andExpect(jsonPath("$.Neighbors", hasSize(481)))
+				.andExpect(jsonPath("$.Neighbors", hasSize(525)))
 				.andExpect(jsonPath("$.Neighbors", hasItem("clinton bill")));
 
 		mvc.perform(MockMvcRequestBuilders.get("/degree?id=espen askeladen").accept(MediaType.APPLICATION_JSON))
