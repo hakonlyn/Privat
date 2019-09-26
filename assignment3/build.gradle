@@ -16,7 +16,12 @@ repositories {
 ext {
 	set('snippetsDir', file("build/generated-snippets"))
 }
-
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -24,6 +29,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
 }
 
 test {
@@ -34,3 +40,6 @@ asciidoctor {
 	inputs.dir snippetsDir
 	dependsOn test
 }
+bootRun { sourceResources sourceSets.main }
+
+

@@ -33,7 +33,7 @@ public class MarvelGraphControllerTest {
 		
 	}
 	
-	
+	/*
 	@WithMockUser("USER")
 	@Test
 	public void checkDegree() throws Exception {
@@ -94,6 +94,6 @@ public class MarvelGraphControllerTest {
                 .andDo(print())	
                 .andExpect(status().isUnauthorized());
     }
-	
-	
+
+	*/
 }

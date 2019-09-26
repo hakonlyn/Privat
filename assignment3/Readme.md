@@ -47,3 +47,14 @@ Your project should provide following APIs at localhost port 8080 (default tomca
 ## Authentication
 Each of these APIs should be made accessible only via username and password. For simplicty we will keep the user name 'user' and password 'test' (not a good practice in real world applications just for this toy project it is fine). For this we are going to use WebSecurityConfigurerAdapter. You can see how to configure an authenticated API [here](https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)
 When the APIs are called without proper user credentials it should return a authentication failure error.
+
+## Run server with autorefresh
+To get it to live reload you need to have 2 terminals open.
+
+* gradle build --continuous
+  - build --continuous will keep satisfying the initial build request until stopped
+  - gradle build --continuous --quiet & 2>1 >/dev/null runs in the background, but you would miss the important build warnings/errors. gradle --stop to stop watching.
+
+* gradle bootRun
+
+Bootrun starts with spring-boot-devtools on classpath, which will detect changes and restart application.
