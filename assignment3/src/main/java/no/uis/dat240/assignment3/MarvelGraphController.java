@@ -24,22 +24,51 @@ public class MarvelGraphController {
 
 		Scanner heroesScanner = new Scanner(new File("marvel-hero-network.csv"));
 		while (heroesScanner.hasNextLine()) {
+			String line = heroesScanner.nextLine();
+			String[] nodes = line.toLowerCase().split(",(?! )");
+			String[] aliases = line.toLowerCase().split(",(?! )|/");
 			
-			String[] nodes = heroesScanner.nextLine().toLowerCase().split(",(?! )");
-			String[] aliases = heroesScanner.nextLine().toLowerCase().split(",(?! )|/");
-			
-		// 	for (String alias : aliases) {
-		// 		HashSet<String> neighbours = new HashSet<String>();
-		// 		for (String node : nodes) {
-		// 			if(this.heroes.containsKey(node)){
-		// 				neighbours = this.heroes.get(alias);
-		// 			}
-		// 			neighbours.add(node);
-		// 		}
-		// 		this.heroes.put(alias, neighbours);
-		// 	}
+			for (String alias : aliases) {
+				alias = alias.trim();
+
+				HashSet<String> neighbours = new HashSet<String>();
+				if(this.heroes.containsKey(alias)){
+					neighbours = this.heroes.get(alias);
+				}
+				
+				for (String node : nodes) {
+					node = node.trim();
+					
+					boolean flag = false; 
+					for (String a : node.split("/")) {
+						if (a.equals(alias)) { 
+							flag = true; 
+							break; 
+						} 
+					} 
+					if(!flag){
+						neighbours.add(node);
+					}else{
+						System.out.println("Spam");
+						if(node.equals("iron man/tony stark") && alias.equals("tony stark")){
+							System.out.println("found the shit");
+							System.out.println(line);
+						}
+					}
+				}
+				this.heroes.put(alias, neighbours);
+			}
 		}
 		heroesScanner.close();
+		// // tony stark - iron man = diff
+		// // iron man is smaller becouse it removes other iron mans such ass (iron man iv)
+		// this.heroes.get("tony stark").removeAll(this.heroes.get("iron man"));
+		
+		// for (String n : this.heroes.get("tony stark")) {
+		// 	System.out.println(n);
+		// }
+			
+
 	}
 
 	@RequestMapping("/")
@@ -50,6 +79,7 @@ public class MarvelGraphController {
 	@GetMapping(path = "/degree", produces = "application/json;charset=UTF-8")
 	@ResponseBody
 	public Map getNodeDegree(@RequestParam String id) {
+		id = id.toLowerCase();
 		if (this.heroes.containsKey(id)) {
 			HashMap<String, Object> map = new HashMap<>();
 			map.put("Node", id);
@@ -61,6 +91,7 @@ public class MarvelGraphController {
 
 	@RequestMapping(value = "/neighbours")
 	public ResponseEntity<Object> getNeighbours(@RequestParam String id) {
+		id = id.toLowerCase();
 		if (this.heroes.containsKey(id)) {
 			HashMap<String, Object> map = new HashMap<>();
 			map.put("Neighbours", this.heroes.get(id));
@@ -72,6 +103,8 @@ public class MarvelGraphController {
 
 	@RequestMapping(value = "/checkedge")
 	public ResponseEntity<Object> getNeighbours(@RequestParam String id1, String id2) {
+		id1 = id1.toLowerCase();
+		id2 = id2.toLowerCase();
 		if (this.heroes.containsKey(id1) && this.heroes.containsKey(id1)) {
 			HashMap<String, Object> map = new HashMap<>();
 			map.put("EdgeExists", this.heroes.get(id1).contains(id2));
@@ -83,6 +116,6 @@ public class MarvelGraphController {
 	}
 
 	@ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "Given node id not found!")
-	public class NodeNotFoundException extends RuntimeException {
+		public class NodeNotFoundException extends RuntimeException {
 	}
 }
