@@ -84,7 +84,6 @@ public class MarvelGraphControllerTest {
 	}
 
 	@Test
-<<<<<<< HEAD
     public void find_nologin_401() throws Exception {
 		mvc.perform(get("/shortestpath/"))
                 .andDo(print())	
@@ -92,10 +91,4 @@ public class MarvelGraphControllerTest {
     }
 
 	*/
-=======
-	public void find_nologin_401() throws Exception {
-		mvc.perform(get("/shortestpath/")).andDo(print()).andExpect(status().isUnauthorized());
-	}
-
->>>>>>> 61217b2148c287ceb6a93b8755bdb83692104b40
 }
