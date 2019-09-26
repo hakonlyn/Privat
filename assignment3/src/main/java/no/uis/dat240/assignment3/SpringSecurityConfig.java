@@ -22,10 +22,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-        // auth.inMemoryAuthentication()
-        //         .withUser("user").password("{noop}password").roles("USER")
-        //         .and()
-        //         .withUser("admin").password("{noop}password").roles("USER", "ADMIN");
+        auth.inMemoryAuthentication()
+                .withUser("hei").password("{noop}nei").roles("USER")
+                .and()
+                .withUser("admin").password("{noop}password").roles("USER", "ADMIN");
 
     }
 
@@ -33,29 +33,32 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        // http
-        //         //HTTP Basic authentication
-        //         .httpBasic()
-        //         .and()
-        //         .authorizeRequests()
-        //         .antMatchers(HttpMethod.GET, "/**").hasRole("USER")
-        //         // .antMatchers(HttpMethod.POST, "/books").hasRole("ADMIN")
-        //         // .antMatchers(HttpMethod.PUT, "/books/**").hasRole("ADMIN")
-        //         // .antMatchers(HttpMethod.PATCH, "/books/**").hasRole("ADMIN")
-        //         // .antMatchers(HttpMethod.DELETE, "/books/**").hasRole("ADMIN")
-        //         .and()
-        //         .csrf().disable()
-        //         .formLogin().disable();
+        http
+                //HTTP Basic authentication
+                
+                .authorizeRequests()
+                .antMatchers("/").permitAll()
+                .anyRequest()
+                .authenticated()
+                // .antMatchers(HttpMethod.GET, "/degree").hasRole("USER")
+                // .antMatchers(HttpMethod.POST, "/books").hasRole("ADMIN")
+                // .antMatchers(HttpMethod.PUT, "/books/**").hasRole("ADMIN")
+                // .antMatchers(HttpMethod.PATCH, "/books/**").hasRole("ADMIN")
+                // .antMatchers(HttpMethod.DELETE, "/books/**").hasRole("ADMIN")
+                .and()
+                .httpBasic();
+                // .csrf().disable()
+                // .formLogin().disable();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        //ok for demo, todo legg til noe inport i gradle build for å få userbuilder til å fungere
-        // User.UserBuilder users = User.withDefaultPasswordEncoder();
+    // @Bean
+    // public UserDetailsService userDetailsService() {
+    //     //ok for demo, todo legg til noe inport i gradle build for å få userbuilder til å fungere
+    //     // User.UserBuilder users = User.withDefaultPasswordEncoder();
 
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        // manager.createUser(users.username("user").password("password").roles("USER").build());
-        // manager.createUser(users.username("admin").password("password").roles("USER", "ADMIN").build());
-        return manager;
-    }
+    //     InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+    //     // manager.createUser(users.username("user").password("password").roles("USER").build());
+    //     // manager.createUser(users.username("admin").password("password").roles("USER", "ADMIN").build());
+    //     return manager;
+    // }
 }

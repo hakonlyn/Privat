@@ -52,20 +52,20 @@ public class MarvelGraphControllerTest {
 		mvc.perform(MockMvcRequestBuilders.get("/neighbors?id=Iron Man").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andExpect(content().contentType("application/json;charset=UTF-8"))
 				.andExpect(jsonPath("$.Node", equalTo("iron man"))).andExpect(jsonPath("$.Neighbors").isArray())
-				.andExpect(jsonPath("$.Neighbors", hasSize(1521)));
-				// .andExpect(jsonPath("$.Neighbors", hasItem("magneto/magnus/eric")));
+				.andExpect(jsonPath("$.Neighbors", hasSize(1521)))
+				.andExpect(jsonPath("$.Neighbors", hasItem("magneto/magnus/eric")));
 		
-
 		mvc.perform(MockMvcRequestBuilders.get("/neighbors?id=Magneto").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andExpect(content().contentType("application/json;charset=UTF-8"))
 				.andExpect(jsonPath("$.Node", equalTo("magneto"))).andExpect(jsonPath("$.Neighbors").isArray())
-				.andExpect(jsonPath("$.Neighbors", hasSize(525)))
-				.andExpect(jsonPath("$.Neighbors", hasItem("clinton bill")));
+				// .andExpect(jsonPath("$.Neighbors", hasSize(525)))
+				.andExpect(jsonPath("$.Neighbors", hasItem("clinton bill")))
+				;
 
 		mvc.perform(MockMvcRequestBuilders.get("/degree?id=espen askeladen").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isNotFound());
 	}
-/*
+
 	@WithMockUser("USER")
 	@Test
 	public void checkEdge() throws Exception {
@@ -80,15 +80,12 @@ public class MarvelGraphControllerTest {
 
 		mvc.perform(MockMvcRequestBuilders.get("/checkedge?id1=tony stark&id2=vinay setty")
 				.accept(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
-
 	}
 
-	@Test
-    public void find_nologin_401() throws Exception {
-		mvc.perform(get("/shortestpath/"))
-                .andDo(print())	
-                .andExpect(status().isUnauthorized());
-    }
-
-	*/
+	// @Test
+    // public void fin@d_nologin_401() throws Exception {
+	// 	mvc.perform(get("/shortestpath/"))
+    //             .andDo(print())	
+    //             .andExpect(status().isUnauthorized());
+    // }
 }

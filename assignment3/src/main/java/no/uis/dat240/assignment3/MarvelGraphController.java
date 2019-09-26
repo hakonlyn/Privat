@@ -48,27 +48,12 @@ public class MarvelGraphController {
 					} 
 					if(!flag){
 						neighbours.add(node);
-					}else{
-						System.out.println("Spam");
-						if(node.equals("iron man/tony stark") && alias.equals("tony stark")){
-							System.out.println("found the shit");
-							System.out.println(line);
-						}
 					}
 				}
 				this.heroes.put(alias, neighbours);
 			}
 		}
 		heroesScanner.close();
-		// // tony stark - iron man = diff
-		// // iron man is smaller becouse it removes other iron mans such ass (iron man iv)
-		// this.heroes.get("tony stark").removeAll(this.heroes.get("iron man"));
-		
-		// for (String n : this.heroes.get("tony stark")) {
-		// 	System.out.println(n);
-		// }
-			
-
 	}
 
 	@RequestMapping("/")
@@ -89,12 +74,12 @@ public class MarvelGraphController {
 		throw new NodeNotFoundException();
 	}
 
-	@RequestMapping(value = "/neighbours")
-	public ResponseEntity<Object> getNeighbours(@RequestParam String id) {
+	@RequestMapping(value = "/neighbors", produces = "application/json;charset=UTF-8")
+	public ResponseEntity<Object> getNeighbors(@RequestParam String id) {
 		id = id.toLowerCase();
 		if (this.heroes.containsKey(id)) {
 			HashMap<String, Object> map = new HashMap<>();
-			map.put("Neighbours", this.heroes.get(id));
+			map.put("Neighbors", this.heroes.get(id));
 			map.put("Node", id);
 			return new ResponseEntity<>(map, HttpStatus.OK);
 		}
@@ -102,10 +87,10 @@ public class MarvelGraphController {
 	}
 
 	@RequestMapping(value = "/checkedge")
-	public ResponseEntity<Object> getNeighbours(@RequestParam String id1, String id2) {
+	public ResponseEntity<Object> checkEdge(@RequestParam String id1, String id2) {
 		id1 = id1.toLowerCase();
 		id2 = id2.toLowerCase();
-		if (this.heroes.containsKey(id1) && this.heroes.containsKey(id1)) {
+		if (this.heroes.containsKey(id1) && this.heroes.containsKey(id2)) {
 			HashMap<String, Object> map = new HashMap<>();
 			map.put("EdgeExists", this.heroes.get(id1).contains(id2));
 			map.put("Node1", id1);
